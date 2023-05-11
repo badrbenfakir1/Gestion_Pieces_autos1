@@ -74,11 +74,16 @@ boutonDecroissant.addEventListener("click", function () {
     genererPieces(piecesOrdonnees);
 });
 
+//boutton decroissant
+const boutonNoDescription = document.querySelector(".btn-nodesc");
 
-
-
-
-
+boutonNoDescription.addEventListener("click", function () {
+    const piecesFiltrees = pieces.filter(function (piece) {
+        return piece.description
+    });
+    document.querySelector(".fiches").innerHTML = "";
+    genererPieces(piecesFiltrees);
+});
 
 
 
